@@ -1,0 +1,27 @@
+1) class Mystring:
+    def __init__(self):
+        self.text=""
+    def getString(self):
+        self .text=input()
+    def printString(self):
+        print(self.text())
+my_string=Mystring()
+my_string.text=input("Input string:")
+print(my_string.text())
+-----------------------------------------------------------------------------------------------------------------------------
+2) class Shape:
+    def __init__(self):
+        pass
+    def area(self):
+        return 0
+class Square(Shape):
+    def __init__(self , length):
+        self.length=length
+    def area(self):
+        return self.length**2
+shape=Shape()
+print("Shape area", shape.area())
+square=Square(6)
+print (square.area())
+----------------------------------------------------------------------------------------------------------------------------------------
+3) 

@@ -1,0 +1,49 @@
+1) #A recipe you are reading states how many grams you need for the ingredient. Unfortunately, your store only sells items in ounces. Create a function to convert grams to ounces. ounces = 28.3495231 * grams
+
+    def function(grams):
+       return 28.3495231 * grams  
+
+    grams = int(input()) 
+    print(function(grams))
+___________________________________
+input =3
+output: 85.0485693
+
+2)Read in a Fahrenheit temperature. Calculate and display the equivalent centigrade temperature. The following formula is used for the conversion: C = (5 / 9) * (F – 32)
+def function(f):
+    return (5 / 9) * (f-32)
+
+f=int(input())
+print(function(f))
+--------------------------------------
+input=3
+output:-16.11111111111111
+
+3)Write a program to solve a classic puzzle: We count 35 heads and 94 legs among the chickens and rabbits in a farm. How many rabbits and how many chickens do we have? create function: solve(numheads, numlegs):
+  def solve(numheads, numlegs):
+    y=(numlegs-2*numheads)//2
+    x=numheads-y
+    return x,y
+numheads=35
+numlegs=94
+chickens,rabbits=solve(numheads, numlegs)
+print(f"chickens:{chickens}, rabbits:{rabbits}")
+-----------------------------------------------------
+output: chickens:23, rabbits:12
+
+4)You are given list of numbers separated by spaces. Write a function filter_prime which will take list of numbers as an agrument and returns only prime numbers from the list.
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1): 
+        if n % i == 0:
+            return False
+    return True
+
+def filter_prime(numbers):
+    return [num for num in numbers if is_prime(num)]  
+numbers = [10, 3, 4, 7, 11, 13, 16, 18]
+primes = filter_prime(numbers)
+print(primes)
+---------------------------------------------------------------
+output: [3, 7, 11, 13]

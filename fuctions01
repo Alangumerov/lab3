@@ -47,3 +47,33 @@ primes = filter_prime(numbers)
 print(primes)
 ---------------------------------------------------------------
 output: [3, 7, 11, 13]
+
+
+5)Write a function that accepts string from user and print all permutations of that string.
+import itertools
+def function():
+  user_input=input()
+  permutations=itertools.permutations(user_input)
+  for perm in permutations:
+      print (''.join(perm))
+function()
+---------------------------------------------------------------------
+input: go
+output: go go og
+
+
+6)Write a function that accepts string from user, return a sentence with the words reversed. We are ready -> ready are We
+def function():
+   a=input()
+   reversed=' '.join(a.split()[::-1])
+   return reversed
+print(function())
+---------------------------------------------------
+input: hello how are you
+output: you are how hello
+
+
+7)
+
+
+

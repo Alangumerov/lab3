@@ -76,4 +76,60 @@ output: you are how hello
 7)
 
 
+8)
 
+
+9)def function():
+    r=float(input())
+    v=(4/3)*3.14*r**3
+    vr=round(v,2)
+    print(vr)
+function()
+
+
+10)def function():
+  a=input().split()
+  unique_list=[]
+  for element in a:
+      if element not in unique_list:
+          unique_list.append(element)
+  print(unique_list)
+          
+function()
+
+11)def function():
+    a=input()
+    reverse=a[::-1]
+    if a==reverse:
+        print("Yes, it is palindrome")
+    else:
+        print("No, it is not palindrome")
+    
+function()
+
+12)def histogram():
+    lst = eval(input())
+    for number in lst:
+        print('*' * number
+histogram()
+
+13)import random
+def func():
+    print("Hello! What is your name ?")
+    a=input()
+    print(f"Well, {a}, I am thinking of a number between 1 and 20.")
+    print("Take a guess")
+    secret_num=random.randint(1,20)
+    attemp=0
+   
+    while True:
+         b=int(input())
+         attemp+=1
+         if b<secret_num:
+             print("Your guess is too low.")
+         elif b>secret_num:
+            print("Your guess is too high.")
+         else:
+            print(f"Good job, {a}!,You guessed my number in {attemp} guesses!" )
+            break
+func()

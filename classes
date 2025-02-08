@@ -24,24 +24,83 @@ print("Shape area", shape.area())
 square=Square(6)
 print (square.area())
 ----------------------------------------------------------------------------------------------------------------------------------------
-3) 
+3) class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+square = Square(4)
+print(f"Площадь квадрата: {square.area()}") 
+
+rectangle = Rectangle(4, 5)
+print(f"Площадь прямоугольника: {rectangle.area()}")  
+
+
+
+--------------------------------------------------------------------------------------------------
+
+
+4)class Point:
+    def __init__(self, x, y):
+        self.x = x  
+        self.y = y  
+
+    def show(self):
+
+        print(f"Point coordinates: ({self.x}, {self.y})")
+
+    def move(self, dx, dy):
+       
+        self.x += dx
+        self.y += dy
+        print(f"Point moved to: ({self.x}, {self.y})")
+
+    def dist(self, other_point):
+       
+        distance = math.sqrt((self.x - other_point.x) ** 2 + (self.y - other_point.y) ** 2)
+        return distance
+
+-----------------------------------------------------------------------------------------
 
 
 
 
 
+5)class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner 
+        self.balance = balance  
 
-4)
+    def deposit(self, amount):
+
+        if amount > 0:
+            self.balance += amount
+            print(f"Депозит на сумму {amount}. Новый баланс: {self.balance}")
+        else:
+            print("Сумма депозита должна быть положительной.")
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"Снято {amount}. Новый баланс: {self.balance}")
+        else:
+            print("Недостаточно средств для снятия.")
+
+account = BankAccount("Ivan", 1000)
+
+account.deposit(500)  
+
+account.withdraw(200)  
+account.withdraw(1500)   
 
 
+account.deposit(-100)  
 
 
-
-
-
-5)
-
-
+---------------------------------------------------------------
 
 
 
